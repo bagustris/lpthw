@@ -1,39 +1,36 @@
-# bismillah, terus belajar, tanpa memikirkan masa depan (don't have plan), 
-# ex25.py: lebih banyak latihan, tapi kali ini beda
+def break_words(stuff):
+    """This function will break up words for us."""
+    words = stuff.split(' ')
+    return words
 
-def bagi_kata(stuff):
-    """ Fungsi ini akan membagi kata-kata untuk kita."""
-    kata = stuff.split(' ')
-    return kata
+def sort_words(words):
+    """Sorts the words."""
+    return sorted(words)
 
-def sort_kata(kata):
-    """Menyortir kata-kata..."""
-    return sorted(kata)
+def print_first_word(words):
+    """Prints the first word after popping it off."""
+    word = words.pop(0)
+    print word
 
-def print_pertama_kata(kata):
-    """Print kata pertama setelah memunculkannya."""
-    kata = kata.pop(0)
-    print kata
+def print_last_word(words):
+    """Prints the last word after popping it off."""
+    word = words.pop(-1)
+    print word
 
-def print_terakhir_kata(kata):
-    """ Print kata terakhir setelah memunculkannya."""
-    kata = kata.pop(-1)
-    print kata
+def sort_sentence(sentence):
+    """Takes in a full sentence and returns the sorted words."""
+    words = break_words(sentence)
+    return sort_words(words)
 
-def sort_kalimat(kalimat):
-    """ Mengambil kalimat utuh dan mengembalikannya dalam kata-kata tersortir)."""
-    kata = bagi_kata(kalimat)
-    return sort_kata (kata)
-
-def print_pertama_dan_terakhir(kalimat):
-    """Print kata pertama dari terakhir dari kalimat."""
-    kata = bagi_kata(kalimat)
-    print_pertama_kata(kata)
-    print_terakhir_kata(kata)
-
-def print_pertama_dan_terakhir_sorted(kalimat):
-    "Sortir kata kemudian print kata pertama dan terakhir."""
-    kata = sort_kalimat(kalimat)
-    print_pertama_kata(kata)
-    print_terakhir_kata(kata)
-
+def print_first_and_last(sentence):
+    """Prints the first and last words of the sentence."""
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
+    
+def print_first_and_last_sorted(sentence):
+    """Sorts the words then prints the first and last one."""
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
+    
