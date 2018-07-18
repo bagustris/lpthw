@@ -12,7 +12,7 @@ def print_pertama_kata(kata2):
     kata = kata2.pop(0)
     print kata
 
-def print_terakhir_kata(kata):
+def print_terakhir_kata(kata2):
     """ Print kata terakhir setelah memunculkannya."""
     kata = kata2.pop(-1)
     print kata
@@ -20,17 +20,17 @@ def print_terakhir_kata(kata):
 def sortir_kalimat(kalimat):
     """ Mengambil kalimat utuh dan mengembalikannya dalam kata-kata tersortir)."""
     kata2 = bagi_kata2(kalimat)
-    return sortir_kata2(kata)
+    return sortir_kata2(kata2)
 
 def print_pertama_dan_terakhir(kalimat):
-    """Print kata pertama dari terakhir dari kalimat."""
-    kata = break_words(kalimat)
-    print_pertama_kata(kata)
-    print_terakhir_kata(kata)
+    """Print kata pertama dan terakhir dari kalimat."""
+    kata2 = bagi_kata2(kalimat)
+    print_pertama_kata(kata2)
+    print_terakhir_kata(kata2)
 
 def print_pertama_dan_terakhir_sorted(kalimat):
     """Sortir kata kemudian print kata pertama dan terakhir."""
-    kata = sortir_kalimat(kalimat)
+    kata2 = sortir_kalimat(kalimat)
     print_pertama_kata(kata2)
     print_terakhir_kata(kata2)
 

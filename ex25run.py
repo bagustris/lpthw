@@ -1,16 +1,17 @@
-import ex25ori
+import ex25id
+
 sentence = "All good things come to those who wait."
-words = ex25ori.break_words(sentence)
+words = ex25id.bagi_kata2(sentence)
 words
-sorted_words = ex25ori.sort_words(words)
+sorted_words = ex25id.sortir_kata2(words)
 sorted_words
-ex25ori.print_first_word(words)
-ex25ori.print_last_word(words)
+ex25id.print_pertama_kata(words)
+ex25id.print_terakhir_kata(words)
 words
-ex25ori.print_first_word(sorted_words)
-ex25ori.print_last_word(sorted_words)
+ex25id.print_pertama_kata(sorted_words)
+ex25id.print_terakhir_kata(sorted_words)
 sorted_words
-sorted_words = ex25ori.sort_sentence(sentence)
+sorted_words = ex25id.sortir_kalimat(sentence)
 sorted_words
-ex25ori.print_first_and_last(sentence)
-ex25ori.print_first_and_last_sorted(sentence)
+ex25id.print_pertama_dan_terakhir(sentence)
+ex25id.print_pertama_dan_terakhir_sorted(sentence)
